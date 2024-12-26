@@ -9,6 +9,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.qa.utils.TestUtils;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
@@ -39,8 +41,8 @@ public class TestBase {
 		
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("url"));
-		driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(200,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(TestUtils.IMPLICT_WAIT, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(TestUtils.PAGELOAD_WAIT,TimeUnit.SECONDS);
 	}
 	
 
