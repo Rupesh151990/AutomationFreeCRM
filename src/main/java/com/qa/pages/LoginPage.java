@@ -1,6 +1,8 @@
 package com.qa.pages;
 
-import java.net.http.WebSocket;
+
+import java.util.Iterator;
+import java.util.Set;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,6 +26,14 @@ public class LoginPage extends TestBase{
 	WebElement signBttn;
 	
 	public HomePage getValidCredentails() {
+		
+		Set<String> windowhandles=driver.getWindowHandles();
+		Iterator<String> iterator  =windowhandles.iterator();
+		
+		String parentWindow =iterator.next();
+		String childWindow =iterator.next();
+		
+		driver.switchTo().window(childWindow);
 		userName.sendKeys(prop.getProperty("username"));
 		password.sendKeys(prop.getProperty("password"));
 		signBttn.click();

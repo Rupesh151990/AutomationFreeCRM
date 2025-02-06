@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 
 import com.qa.base.TestBase;
 import com.qa.pages.DashBoradPage;
-import com.qa.pages.HomePage;
 import com.qa.pages.LoginPage;
 
 public class HomePage_TestCase extends TestBase{
@@ -26,9 +25,11 @@ public class HomePage_TestCase extends TestBase{
 		
 		dbPage.getLoginLink();
 	}
-	
+	 
 	@Test
 	public void VerifyValidLogin() {
+		
+		
 	lgPage.getValidCredentails();
 	}
 	

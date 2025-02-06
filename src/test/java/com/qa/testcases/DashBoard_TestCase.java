@@ -29,6 +29,7 @@ public class DashBoard_TestCase extends TestBase{
 	@AfterTest
 	public void tearDown() {
 		driver.quit();
-	}
+		driver.close();
+		}
 
 }
