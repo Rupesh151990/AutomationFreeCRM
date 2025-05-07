@@ -6,30 +6,31 @@ import org.testng.annotations.Test;
 
 import com.qa.base.TestBase;
 import com.qa.pages.DashBoradPage;
+import com.qa.utils.TestUtils;
 
-public class DashBoard_TestCase extends TestBase{
-	
+public class DashBoard_TestCase extends TestBase {
+
 	DashBoradPage dbPage;
-	
+
 	public DashBoard_TestCase() {
 		super();
 	}
-	
+
 	@BeforeMethod
 	public void setup() {
 		intilization();
 	}
-	
+
 	@Test
 	public void VerifyDashBoardPage() {
 		dbPage = new DashBoradPage();
-		dbPage.getLoginLink();
+		dbPage.getLoginLink();;
 	}
-	
+
 	@AfterTest
-	public void tearDown() {
+	public void tearDown()  {
 		driver.quit();
-		driver.close();
-		}
+
+	}
 
 }
