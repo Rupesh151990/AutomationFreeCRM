@@ -54,7 +54,6 @@ public class ExtentReportListener extends TestBase implements ITestListener {
 
 	@Override
 	public void onFinish(ITestContext context) {
-		// TODO Auto-generated method stub
-
+	extentreport.flush();
 	}
 }
